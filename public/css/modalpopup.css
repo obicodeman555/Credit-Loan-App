@@ -1,0 +1,162 @@
+:root {
+  --app-bg-color: rgba(109, 110, 112, 0.235);
+  --app-link-color: #F2CF1D;
+  --app-primary-btn-color: rgb(238, 114, 42);
+  --app-secondary-bg-color: #fff;
+  --fav-color: #5c6ac4;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Candara"
+}
+
+
+
+.modal-popup-content-container{
+  background: rgb(250, 247, 247);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  /* top: 70%; */
+  left: 30%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  box-shadow:0 0 500px 500px #dad4d4fa;
+  letter-spacing: 0.06rem;
+  padding: 1.0rem;
+  width: 50%;
+  border: 1px solid rgb(163, 158, 158);
+  z-index: 3;
+  animation-name: easeDisplay;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  /* backface-visibility: hidden; */
+}
+
+.modal-popup-content-container .modal-content{
+  border: 1px solid #e4e4e4;
+  margin-top: 1.2rem;
+  font-size: 1.155rem;
+  /* text-align: center; */
+  display: grid;
+  grid-template-columns: 100%;
+  grid-row-gap: 2.0rem;
+  padding: 10px;
+}
+
+.modal-content i{
+  font-size: 0.9rem;
+  color: var(--fav-color);
+  margin-right: 8px;
+}
+
+.modal-content label span.title{
+  font-weight: 700;
+}
+
+.modal-content label{
+  margin: 0 1.8rem;
+}
+
+.modal-content label span:last-child{
+  margin-left: 0.535rem;
+}
+
+.btn-container{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1.233rem;
+  padding: 0.85rem;
+  
+}
+
+.btn-container button{
+  font-size: 1.233rem;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  background: #000000;
+  color: rgb(226, 221, 221);
+  border-radius: 5px;
+  padding: 1.0rem;
+  text-align: center;
+  box-shadow: 0 0 2px 2px rgba(153, 151, 151, 0.65);
+  cursor: pointer;
+}
+.btn-container button:hover{
+  color: var(--fav-color)
+}
+
+.modal-content .btn-container button i{
+  font-size: 1.233rem;
+  margin-right: 0.633rem;
+}
+
+.modal-content .btn-container button i.fa-check{
+  color: rgb(13, 241, 13);
+}
+
+.modal-content .btn-container button i.fa-times{
+  color: rgb(255, 15, 15);
+}
+
+.modal-popup-content-container #close-modal-btn{
+  padding: 0.455rem;
+  font-size: 1.233rem;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  background: #f80404;
+  color: #fff;
+  border-radius: 50%;
+  padding: 0.333rem;
+  height: 30px;
+  width: 30px;
+  line-height: 22px;
+  position: absolute;
+  top: 8px;
+  right:20px;
+  box-shadow: 0 0 4px 4px rgba(231, 222, 222, 0.514);
+}
+
+.modal-popup-content-container #close-modal-btn:hover{
+  background-color: rgba(255, 0, 0, 0.932);
+  cursor: pointer;
+}
+
+.modal-popup-content-container h4{
+  font-size: 1.4rem;
+  text-align: center;
+  color: #b4afaffa
+}
+
+.modal-popup-content-container h4 i{
+  color: var(--fav-color);
+  margin-right: 10px;
+}
+
+.disable{
+  display:none;
+}
+
+@keyframes easeDisplay{
+  0%{
+    opacity: 0;
+    top: 40%;
+  }
+
+  50% {
+    opacity: 0.655;
+    top: 55%;
+  }
+
+  100%{
+    opacity: 1;
+    top: 70%;
+  }
+}

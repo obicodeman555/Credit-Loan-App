@@ -1,0 +1,514 @@
+:root {
+  --app-bg-color: rgba(243, 245, 252, 0.321);
+  --app-link-color: #F2CF1D;
+  --app-primary-btn-color: rgb(238, 114, 42);
+  --app-secondary-bg-color: #fff;
+  --fav-color: #5c6ac4;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Candara"
+}
+
+body{
+  background-color: #f3f5f9;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+/******   Header Styling  **********/
+.main-container header {
+   width: 100%;
+   height: 100%;
+   background: #fff;
+   padding: 10px;
+   box-shadow: 0 0 2px 2px rgba(190, 188, 188, 0.514);
+   position: relative;
+ }
+
+ .main-container header .header-container{
+   width: 100%;
+   height: 100%;
+   display:flex;
+   justify-content: space-between;
+   z-index: 99;
+ }
+ header .header-container .header-right-content
+ {
+    display: flex;
+    margin-right: 30px;
+    width: 300px;
+    justify-content: space-around;
+    padding: 5px;
+ }
+
+ .header-container #logo{
+   display: flex;
+   text-transform: uppercase;
+   margin-left: 50px;
+   justify-items: center;
+   align-items: center;
+   margin-left: 10px;
+   /* width: auto; */
+ }
+ .header-container #logo img{
+   width: 35px;
+ }
+ .header-container #logo .title {
+   margin-left: 10px;
+   font-size: 1.0rem;
+   color: #5c6ac4;
+ }
+
+ .header-container .header-right-content a{
+   color: rgb(99, 97, 96);
+ }
+ .header-container .header-right-content a:hover{
+  color: #000;
+  transform: scale(1.5);
+  transition: ease-in 0.2s;
+}
+
+.header-container .header-right-content a .notifier{
+  position: absolute;
+  background: red;
+  padding: 3px;
+  height: 13px;
+  width: 13px;
+  line-height: 3px;
+  color: #fff;
+  text-align: center;
+  top: 10px;
+}
+/******   End of Header Styling  **********/
+
+
+
+
+/******   Side Bar Styling  **********/
+.main-container .sidebar{
+  width: 235px;
+  height: 100vh;
+  background: #fff;
+  padding: 30px 0px;
+  position: fixed;
+  box-shadow: 0 5px 2px 3px rgba(190, 188, 188, 0.514);
+  z-index: 2;
+  margin-top: 2px;
+  /* overflow-y: scroll; */
+}
+
+.main-container .sidebar .logo{
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  display: flex;
+  border-bottom: 1px solid #bdb8d7;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.main-container .sidebar .logo img{
+  width: 50px;
+  height: 50%;
+  margin-left: 10px;
+  margin-top: -20px;
+}
+.main-container.sidebar .logo span{
+  text-transform: uppercase;
+  margin-left: 5px;
+}
+
+.main-container .sidebar ul li{
+  padding: 5px;
+  margin-bottom: 5px;
+  
+}
+
+.main-container .sidebar ul li a{
+  padding: 15px;
+  display: block;
+}
+
+.sidebar ul li a img{
+  width: 40px;
+}
+
+.sidebar ul li a span{
+  padding: 5px;
+  position: relative;
+  top: -15px;
+  color: rgb(180, 170, 170);
+  font-weight: 500;
+}
+
+.main-container .sidebar li:hover{
+  background-color: rgba(248, 237, 82, 0.993);
+  border-left: 5px solid #000; 
+}
+
+.sidebar-active{
+  background-color: rgba(248, 237, 82, 0.993);
+  border-left: 5px solid #000;
+}
+
+.main-container .sidebar li:hover a span{
+  color: rgb(10, 10, 10);
+  text-transform: uppercase;
+  font-size: 12px;
+  cursor: pointer; 
+  font-weight: 700;
+}
+/******   End of Side Bar Styling  **********/
+
+/******   Main Styling  **********/
+.main-container main{
+  position: relative;
+  left:250px;
+  top: 20px;
+  padding:10px;
+  width: 100%;
+  height: 100%;
+}
+
+main .header{
+ background-color: #fff;
+  max-width: 980px;
+}
+
+main .header .header-content{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    box-shadow: 0 0 2px 1px rgba(0,0,0,0.07);
+}
+.header-content span:first-child{
+  font-size: 1.3rem;
+  color: var(--fav-color);
+}
+.header-content a{
+   color: var(--fav-color);
+   font-size: 0.9rem;
+   margin: auto 0px;
+   font-weight: 500;
+   letter-spacing: 0.009rem;
+}
+
+.header-content a:hover{
+    border-bottom: 1.3px solid #afaaaa;
+}
+
+
+main #dashboard-data{
+  position:relative;
+  top: 20px;
+  width: 980px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  text-align: center;
+}
+
+main #dashboard-data .card{
+ background:#fff; 
+  padding:10px;
+  box-shadow: 0 0 2px 1px rgba(0,0,0,0.07);
+  width: 100%;
+  height: 90px;
+  margin: 0px auto;
+}
+
+.card span:first-child{
+  font-size: 1.2rem;
+  font-weight: 600;
+  color:#afaaaa;
+}
+
+.card .card-content{
+  position: relative;
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+}
+
+.card .card-content i, .count {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+i.fa-check{color: lightgreen}
+i.fa-user, i.fa-users{color:rgb(255, 214, 11) }
+/******   End of Main Styling  **********/
+
+.sidebar-tab-content{
+  display: none;
+}
+
+.sidebar-tab-content-active{
+  display: block;
+}
+
+
+.disable{display: none;}
+.enable{display: block;}
+
+/*********************************Styling for dashboard navigation contents *****************/
+
+/******   Table Styling  **********/
+#table-container{
+  background: #fff;
+  position: relative;
+  top: 1.8rem;
+  max-width: 980px;
+  padding: 1.0rem;
+  box-shadow: 0 0 2px 1px rgba(0,0,0,0.07);
+  border-radius: 5px;
+}
+
+table{
+  width: 950px;
+  top: 20px;
+  text-align: center; 
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-radius: 5px 5px  0 0;
+  overflow: hidden;
+  box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.15);
+}
+
+#table-container h3{
+  position:relative;
+  top: 5px;
+  font-size: 1.4rem;
+}
+
+th{
+  background: rgb(124, 124, 124);
+  color:#fff;
+}
+
+th, td{
+  padding: 3px 8px;
+}
+
+tbody tr:nth-child(odd){
+  background-color: rgba(228, 228, 124, 0.35);
+}
+
+tbody tr td #verified, tbody tr td #unverified{
+    letter-spacing: 8px;
+    color: rgba(92, 92, 91, 0.35);
+    cursor: pointer;
+}
+
+i.statusTitle{
+  font-size: 0.9rem;
+  margin-left: 0.3rem;
+  color: rgba(51, 51, 51, 0.55);
+  letter-spacing: 0.005rem;
+}
+
+i.statusTitle span:not(:first-child){
+  margin-left: 5px;
+  margin-right: 5px;
+}/******   End of Table Styling  **********/
+
+/******styling for tab navigation for loan request and loan application**********/
+.loan-request-tab-container{
+  max-width: 980px;
+  margin-top: 1.7rem;
+}
+
+ul.tablist-container{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  max-width: 980px;
+  grid-column-gap: 20px;
+  
+}
+
+.tablist{
+  margin: 0 auto;
+  background: #fff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   letter-spacing: 0.05rem;
+   width: 300px;
+   padding: 0.4rem;
+   box-shadow:  0 0 4px 1px rgba(0, 0, 0, 0.15);
+   border-radius: 4px;
+}
+ .tablist img{
+    width: 80px;
+    height: 60px;
+    position: relative;
+    padding: 0 10px;
+}
+.tablist span{
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #bdb8d7
+}
+
+.tablist:hover span{
+  color: var(--fav-color);
+}
+
+.tablist:hover{
+  box-shadow:  0 0 4px 1px rgb(132, 100, 247);
+}
+
+/******end of styling for tab navigation for loan request and loan application**********/
+
+
+/******styling for tab navigation for loan request and loan application with javascript**********/
+
+.container-loan-request-contents{
+  display: none;
+}
+
+.container-loan-request-contents-active{
+  display: block;
+}
+
+.tablist-active{  
+  box-shadow:  0 0 4px 1px rgb(132, 100, 247);
+ }
+
+ .tablist-active span{color: var(--fav-color);}
+
+/*********************end of styling for tab navigation for loan request and loan application with javascript**********/
+
+
+
+/***************************Styling for tab navigation(content) of loan request and loan apptns **********/
+ .container-loan-request-contents{
+    margin: 20px 94px;
+    width: 810px;
+    /* padding: 0.3rem; */
+    height: 100%;
+ }
+
+ /*******table styling for loan request**/
+ .container-loan-request-contents #table-request{
+  background: #fff;
+  position: relative;
+  top: 0.0rem;
+  max-width: 980px;
+  padding: 1.0rem;
+  box-shadow: 0 0 2px 1px rgba(0,0,0,0.07);
+  border-radius: 5px;
+}
+
+#table-request table{
+  width: auto;
+  top: 20px;
+  text-align: center; 
+  border-collapse: collapse;
+  border-spacing: 0;
+  /* border-radius: 5px 5px  0 0; */
+  /* overflow: hidden; */
+  /* box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.15); */
+}
+
+.container-loan-request-contents #table-request h3{
+  position:relative;
+  /* top: 0px; */
+  font-size: 1.4rem;
+  letter-spacing: 0.07rem;
+}
+
+.container-loan-request-contents tr th{
+  background: #fff;
+  color:rgb(155, 151, 151);
+  padding: 5px;
+}
+
+
+
+.container-loan-request-contents tr:nth-child(odd){
+  background-color: #fff;
+}
+#table-request table td{
+  color: var(--fav-color);
+  font-size: 0.99rem;
+  width: 200px;
+}
+
+#table-request table td i.fa:not(.fa-eye){
+  cursor: none;
+}
+#table-request table td i.fa-eye{
+  cursor: pointer;
+  color: #2dc004;
+}
+#table-request table td i.fa-eye:hover{
+  color: #5fff33
+}
+ /*********end of table styling for loan request ********/
+
+ /******Styling for current loan table***********************************/
+ .current-loan-container tr td{
+   color: var(--fav-color);
+   font-size: 0.95rem;
+   font-weight: 600;
+ }
+
+ .current-loan-container tr th{
+   padding: 5px;
+   background: rgb(241, 240, 234);
+   color: #000;
+ }
+
+ .current-loan-container tr:nth-child(odd){
+  background: rgb(243, 238, 209); 
+ }
+
+ .current-loan-container h3 span{
+   color: #7a7676;
+   font-size: 1.0rem;
+ }
+
+ .current-loan-container tr td i.fa{
+   color: red;
+ }
+ /*********End of Styling for current loan table***********************************/
+
+  /******Styling for repaid loans table***********************************/
+  .repaid-loan-container tr td{
+    color: var(--fav-color);
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+ 
+  .repaid-loan-container tr th{
+    padding: 5px;
+    background: rgb(241, 240, 234);
+    color: #000;
+  }
+ 
+  .repaid-loan-container tr:nth-child(odd){
+   background: rgb(243, 238, 209); 
+  }
+ 
+  .repaid-loan-container h3 span{
+    color: #7a7676;
+    font-size: 1.0rem;
+  }
+ 
+  .repaid-loan-container tr td i.fa{
+    color:#3de90e;
+  }
+  /*********End of Styling for current loan table***********************************/
+
+
+/**************************End of Styling for tab navigation(content) of loan request and loan apptns with javascript**********/
+
+
+
+/*********************************End of styling for dashboard(side bar) navigation contents *****************/

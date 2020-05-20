@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/admin-dashboard.css">
+  <link rel="stylesheet" href="../../fontawesome/css/all.css">
+  <link rel="stylesheet" href="../../public/css/modalpopup.css">
+  <title>Admin | Quick-Credit</title>
+</head>
+<body>
+  <div class="main-container">
+      <header>
+          <div class="header-container">
+              <span id="logo">
+                <img src="../images/database.png" alt="">
+                <span class="title">Administrator</span> 
+              </span>
+              <div class="header-right-content">
+                  <a href=""><i class="fas fa-search"></i></a>
+                  <a href="#"><i class="fas fa-user"></i></a>
+                  <a href="#" class="message">
+                    <i class="fas fa-envelope"></i>
+                    <span class="notifier">1</span>
+                  </a>
+                  <a href="#" class="notification">
+                    <i class="fas fa-bell"></i>
+                    <span class="notifier">1</span>
+                  </a>
+              </div>
+          </div>
+      </header><!--End of Header-->
+      
+      <div class="sidebar">
+          <div class="logo">
+            <img src="../../public/images/wallet.png" alt=""><span>Quick Credit</span>
+          </div>
+          <ul class="sidebar_content">
+            <li class="tab" data-for-tab = "dashboard" id="dashboard">
+              <a href="#">
+                <img src="../../public/images/home.png" alt="">
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li class="tab" data-for-tab = "current-loan">
+              <a href="#">
+                <img src="../../public/images/web.png" alt="">
+                <span>Current Loan</span>
+              </a>
+            </li>
+            <li class="tab" data-for-tab = "transactions">
+              <a href="">
+                <img src="../../public/images/blockchain.png" alt="">
+                <span>Transactions</span>
+            </a>
+          </li>
+            <li class="tab" data-for-tab = "users">
+              <a href="#">
+              <img src="../../public/images/resume.png" alt="">
+              <span>Users</span>
+            </a>
+          </li>
+            <li class="tab" data-for-tab="repaid-loans">
+              <a href="#">
+                <img src="../../public/images/receive-cash.png" alt="">
+                <span>Repaid Loans</span>
+              </a>
+            </li>
+            <li class="tab" data-for-tab="loan-applications">
+              <a href="#">
+                <img src="../../public/images/layers.png" alt="">
+                <span>Loan Applications</span>
+              </a>
+          </ul>
+      </div><!--End of Side Bar-->
+
+      <main>
+        <div class="header">
+            <div class="header-content">
+              <span>Dashboard</span>
+              <a href="adminpostpayment.html" tool-tip="">Post Loan Repayment</a>
+              <span>
+                <i class="fa fa-home" style="color: #5c6ac4"></i> / DashBoard
+              </span>
+            </div>
+        </div>
+
+        <div class="sidebar-tab-content" data-tab="dashboard" id="dashboard-data">
+            <div class="card">
+              <span>Users</span>
+              <div class="card-content">
+                <i class="fa fa-user"></i>
+                <span class="count">35</span>
+              </div>
+            </div>
+            <div class="card">
+              <span>Total Loan Request</span>
+              <div class="card-content">
+                <i class="fa fa-users"></i>
+                <span class="count">35</span>
+              </div>
+            </div>
+            <div class="card">
+              <span>Successful Loan Repayment</span>
+              <div class="card-content">
+                <i class="fa fa-check"></i>
+                <span class="count">35</span>
+              </div>
+            </div> 
+        </div>
+        <!--End Count indicator for Admin DashBoard-->
+
+          <div class="sidebar-tab-content current-loan-container" data-tab="current-loan">
+                <div id="table-container">
+                  <h3>Current Loan <span>(not fully paid)</span></h3>
+                  <p style="color: var(--fav-color); margin: 0.6rem 0px;">DEC 26, 2018 11:55 AM</p>
+                  <table>
+                      <tr>
+                        <th>Loan ID</th>
+                        <th>Date of Request</th>
+                        <th>First Name</th>
+                        <th>Repaid</th>
+                        <th>Tenor</th>
+                        <th>Loan Amount</th>
+                        <th>Interest</th>
+                        <th>Monthly Installment</th>
+                        <th>Total Repayment</th>
+                        <th>Balance</th>
+                      </tr>
+                      
+                      <tr>
+                        <td>2315</td>
+                        <td>May 21, 2019</td>
+                        <td>Ofe</td>
+                        <td><i class="fa fa-times"></i></td>
+                        <td>6 Months</td>
+                        <td>&#8358; 80000</td>
+                        <td>&#8358; 4000</td>
+                        <td>&#8358; 14000</td>
+                        <td>&#8358; 84000</td>
+                        <td>&#8358; 80000</td>
+                      </tr>
+                      <tr>
+                        <td>2315</td>
+                        <td>May 21, 2019</td>
+                        <td>Ofe</td>
+                        <td><i class="fa fa-times"></td>
+                        <td>6 Months</td>
+                        <td>&#8358; 80000</td>
+                        <td>&#8358; 4000</td>
+                        <td>&#8358; 14000</td>
+                        <td>&#8358; 84000</td>
+                        <td>&#8358; 80000</td>
+                      </tr>
+                  </table>
+                </div>
+          </div><!--End of Current Loans Table-->
+
+          <div class="sidebar-tab-content" data-tab="transactions">transactions</div><!--End of loan transaction table-->
+
+
+          <div class="sidebar-tab-content" data-tab="users">
+              <div id="table-container">
+                    <h3>Users Account<i class="statusTitle">(<span>verified</span><i class="fa fa-check"></i>,<span>unverified</span><i class="fa fa-check" style="color: gray;"></i><i class="fa fa-times"></i><span>and</span><span>rejected</span><i class="fa fa-times" style="color:red"></i>)</i></h3>
+                    <p style="color: var(--fav-color); margin: 0.6rem 0px;">DEC 26, 2018 11:55 AM</p>
+                    <table>
+                        <thead>
+                          <th>User ID</th>
+                          <th>First Name</th>
+                          <th>Last Name</th>
+                          <th>Email Address</th>
+                          <th>Home/Work Address</th>
+                          <th>Date Of Reg.</th>
+                          <th>Status</th>
+                        </thead>
+                        
+                      <tbody>
+                        <tr>
+                          <td>2315</td>
+                          <td>Obicodeman</td>
+                          <td>Ofe</td>
+                          <td>obicodeman@yahoo.com</td>
+                          <td>Long Rannge Communications</td>
+                          <td>February 21, 2019 </td>
+                          <td>
+                            <i class="fa fa-check" id="verified"></i>
+                            <i class="fa fa-times" id="unverified"></i>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+              </div>
+          </div><!--End of Users Table-->
+          
+
+          <div class="sidebar-tab-content repaid-loan-container" data-tab="repaid-loans">
+            <div id="table-container">
+              <h3>Repaid Loan <span>(fully paid)</span></h3>
+              <p style="color: var(--fav-color); margin: 0.6rem 0px;">DEC 26, 2018 11:55 AM</p>
+              <table>
+                  <tr>
+                    <th>Loan ID</th>
+                    <th>Date of Request</th>
+                    <th>First Name</th>
+                    <th>Repaid</th>
+                    <th>Tenor</th>
+                    <th>Loan Amount</th>
+                    <th>Interest</th>
+                    <th>Monthly Installment</th>
+                    <th>Total Repayment</th>
+                    <th>Balance</th>
+                  </tr>
+                  
+                  <tr>
+                    <td>2315</td>
+                    <td>May 21, 2019</td>
+                    <td>Ofe</td>
+                    <td><i class="fa fa-check"></i></td>
+                    <td>6 Months</td>
+                    <td>&#8358; 80000</td>
+                    <td>&#8358; 4000</td>
+                    <td>&#8358; 14000</td>
+                    <td>&#8358; 84000</td>
+                    <td>&#8358; 0.0</td>
+                  </tr>
+              </table>
+        </div>
+          </div>
+          <!--End of Repaid Loans Table-->
+
+         <div class="sidebar-tab-content loan-request-tab-container" data-tab="loan-applications" id="container-for-loan-applications">
+              <ul class="tablist-container">
+                <li class="tablist" data-for-tab="loan-request">
+                  <img src="../../public/images/request.png" alt="">
+                  <span>Loan Request</span>
+                </li>
+                <li class="tablist" data-for-tab="loan-applications">
+                <img src="../../public/images/layers.png" alt="">
+                <span>Loan Applications</span>
+              </li>
+              </ul>
+
+                <!---End of tabs for loanapp and request-->
+              <div class="container-loan-request-contents" data-tab="loan-request">
+                  <div id="table-request">
+                    <h3>Loan Request<i class="statusTitle">(<span>approve</span><i class="fa fa-check"></i>,<span>pending</span><i class="fa fa-check" style="color: gray;"></i><i class="fa fa-times"></i><span>and</span><span>reject</span><i class="fa fa-times" style="color:red"></i>)</i></h3>
+                    <p style="color: var(--fav-color); margin: 0.6rem 0px;">DEC 26, 2018 11:55 AM</p>
+                    <table>
+                          <tr>
+                            <th>Loan ID</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Amount</th>
+                            <th>Description</th>
+                            <th>Reciever's Acct No.</th>
+                            <th>Reciever's Bank Name</th>
+                            <th>Status</th>
+                            <th>All Details</th>
+                          </tr>
+                                      
+                        <tr>
+                          <td>2315</td>
+                          <td>Obicodeman</td>
+                          <td>Ofe</td>
+                          <td>80000</td>
+                          <td>Farming Investment</td>
+                          <td>3244509909</td>
+                          <td>Wema Bank</td>
+                          <td>
+                            <i class="fa fa-check" id="verified"></i>
+                            <i class="fa fa-times" id="unverified"></i>
+                          </td>
+                          <td>
+                           <i class="fa fa-eye" id="modal-trigger"></i>
+                          </td>
+                        </tr>
+                    </table>
+                 </div>
+                  <div class="modal-popup-content-container">
+                    
+                      <h4><i class="fa fa-list" ></i>Details on Loan Request</h4>
+                      <div class="modal-content">
+                        <label>
+                          <i class="fa fa-user-lock"></i>
+                          <span class="title">Loan ID:</span>
+                          <span>2315</span>
+                        </label>
+                        <label>
+                          <i class="fa fa-envelope"></i>
+                          <span class="title">Email Address:</span> 
+                          <span>obicodeman@gmail.com</span>
+                        </label>
+                        <label>
+                          <i class="fa fa-phone"></i>
+                          <span class="phone">Phone Number:</span> 
+                          <span>08032456778</span>
+                        </label>
+                        <label>
+                          <i class="fa fa-wallet"></i>
+                          <span class="title">Amount:</span>
+                          <span><span class="naira-symbol">&#8358;</span>80000</span>
+                        </label>
+                        <label>
+                          <i class="fa fa-percent"></i>
+                          <span class="title">Interest:</span>
+                          <span><span class="naira-symbol">&#8358;</span>4000</span>
+                          <span>(5% of Amount)</span>
+                        </label>
+                        <label>
+                          <i class="fa fa-calendar"></i>
+                          <span class="title">Tenor:</span>
+                          <span>6 months</span>
+                        </label>
+                        <label>
+                          <i class="fa fa-arrow-down"></i>
+                          <span class="title">Monthly Installment:</span>
+                          <span><span class="naira-symbol">&#8358;</span>14000</span>
+                        </label>
+                        <label>
+                          <i class="fa fa-arrow-down"></i>
+                          <span class="title">Total Repayment</span>
+                          <span><span class="naira-symbol">&#8358;</span>84000</span>
+                        </label>
+                
+                        <div class="btn-container">
+                          <button class="approve-btn"><i class="fa fa-check"></i>Approve Loan</button>
+                        <button class="approve-btn"><i class="fa fa-times"></i>Reject Loan</button>
+                        </div>
+                      </div>
+                      <button><i class="fa fa-times" id="close-modal-btn"></i></button>
+                  </div>
+              </div>
+          </div>
+         
+        <!---End of loanapp and request tab content-->
+        
+                
+        <div class="container-loan-request-contents" data-tab="loan-applications">
+          loan-application
+        </div>
+                
+           <!--End of Loan Application Content(tabs and its content)-->
+      </main> <!--end of Content for sidebar tab control-->
+      
+  </div>
+  <!---End of main Container-->
+  
+  <script  src="../js/admin-dashboard.js"></script>
+  <script src="../../public/js/modalpopup.js"></script>
+</body>
+</html>

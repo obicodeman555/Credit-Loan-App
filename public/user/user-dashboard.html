@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your | Dashboard</title>
+  <link rel="stylesheet" href="../css/user-dashboard.css">
+  <link rel="stylesheet" href="../../fontawesome/css/all.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+              <img src="../images/wallet.png" alt=""><span>Quick Credit</span>
+            </div>
+            <ul class="sidebar_content">
+              <li class="dashboard sidebar-active">
+                <a href="">
+                  <img src="../images/home.png" alt="">
+                  <span>Dashboard</span>
+                </a>
+              </li>
+              <li data-li = "request">
+                <a href="">
+                  <img src="../images/web.png" alt="">
+                  <span>Request a Loan</span>
+                </a>
+              </li>
+              <li data-li = "transactions">
+                <a href="">
+                  <img src="../images/blockchain.png" alt="">
+                  <span>Transactions</span>
+              </a>
+            </li>
+              <li data-li = "profile">
+                <a href="">
+                <img src="../images/resume.png" alt="">
+                <span>Profile</span>
+              </a>
+            </li>
+              <li data-li="settings">
+                <a href="">
+                  <img src="../images/customer-support.png" alt="">
+                  <span>Settings</span>
+                </a>
+              </li>
+            </ul>
+        </div>
+       
+        <main>
+               <header>
+                  <div class="navbar">
+                      <div class="identity">
+                          <span class="greeting">Welcome,</span><span class="profile">Obicodeman</span>
+                      </div>
+                      <div class="notification">
+                            <img src="../images/notification.png" alt="">
+                            <span id="counter">1</span>
+                      </div>
+                      <div class="other">
+                          <img src="../images/plus.png" alt="" id="dropdown">
+                          <div class="dropdown-content" style="display:none;">
+                            <a href="">Log out</a>
+                            <a href="">Profile setting</a>
+                          </div>
+                      </div>
+                  </div>
+              </header>
+
+              <div class="tab-layout-container">
+                  <nav class="tab-nav">
+                          <button class="tablinks btn-active" data-for-tab ="1" ><i class="fas fa-chevron-down" id="defaultOpen"></i>Recent Transactions</button>
+                          <button class="tablinks" data-for-tab="2"><i class="fas fa-credit-card"></i>Balance</button>
+                          <button class="tablinks" data-for-tab = 3><i class="fas fa-eye"></i>Loan Calculator</button>
+                          <button class="tablinks" data-for-tab="4"><i class="fas fa-credit-card"></i>Cards</button>
+                  </nav>
+                  <!---End of Dynamic Navigation bar-->
+                  
+                  <div class="tab-content content_active" id="tab-content-one" data-tab="1" >
+                      <h3>Loan Transaction</h3>
+                      <p>as of DEC 26, 2018 11:55 AM</p>
+                      <table>
+                          <thead>
+                            <th>Loan ID</th>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th>Tenor</th>
+                            <th>Installments</th>
+                            <th>Interest</th>
+                            <th>Status</th>
+                            <th>Repaid</th>
+                            <th>Next Payment</th>
+                          </thead>
+                          
+                        <tbody>
+                          <tr>
+                            <td>2315</td>
+                            <td>03-05-19</td>
+                            <td>$200,000</td>
+                            <td>6 months</td>
+                            <td>$25,000</td>
+                            <td>$6,000</td>
+                            <td style="color:rgb(25, 211, 25);">Approved</td>
+                            <td>Ongoing</td>
+                            <td>14-16-2019</td>
+                          </tr>
+                          <tr>
+                            <td>2313</td>
+                            <td>03-05-19</td>
+                            <td>$200,000</td>
+                            <td>6 months</td>
+                            <td>$25,000</td>
+                            <td>$6,000</td>
+                            <td style="color:rgb(25, 211, 25);">Approved</td>
+                            <td>Paid</td>
+                            <td>Cleared</td>
+                          </tr>
+                          </tbody>
+                      </table>
+                  </div>
+                  <!---End of Dynamic Header Navigation for Loan Transaction Content-->
+                  
+                  <div class="tab-content"  data-tab="2">
+                      Balance
+                  </div>
+                 <!---End of Dynamic Header Navigation for Balance Content-->
+
+                  <div class="tab-content"  data-tab="3">
+                      Calculator
+                  </div>
+                  <!---End of Dynamic Header Navigation for Loan Calculator-->
+
+                  <div class="tab-content"  data-tab="4">
+                Cards
+                  </div>
+                  <!---End of Dynamic Header Navigation for Cards Content-->
+              </div>
+              <!---End of Dynamic Navigation for tab-layout-container-->
+
+                  <div class="tab-content-sidebar request">
+                    <h3><span>Quick-Credit</span> Loan Application</h3>
+                    <hr>
+                    <form action="">
+                        <div class="flname">
+                          <input type="text" name="" id="" placeholder="Enter first name">
+                          <input type="text" name="" id="" placeholder = "Enter last name">
+                        </div>
+                        <div class="acctaddr">
+                          <input type="number" name="" id="" placeholder=" Bank account to recieve">
+                          <input type="text" name="" id="" placeholder="Enter an address">
+                        </div>
+                        <div class="amtphone">
+                          <input type="text" name="" id="" placeholder="Loan amount">
+                          <input type="text" name="" id="" placeholder="Enter a phone number">
+                        </div> 
+                        <textarea  placeholder="Briefly tell us why you need loan..."></textarea>
+                        <button id="requestbtn">Request Loan</button>
+
+                    </form>
+                  </div>
+                  <!---End of Dynamic Side Bar Navigation for request form Content-->
+                  <div class="tab-content-sidebar transactions">
+                      <div class="repayment-history-container">
+                          <div class="header-content">
+                            <img src="../images/refund.png" alt="">
+                            <h1 class="title">Repayment History</h1>
+                            <img src="../images/history.png" alt="">
+                          </div>
+                          
+                          <div class="active-loan-repayment">
+                              <div class="detailsbox">
+                                <section>
+                                      <span>Active Loan</span>
+                                    <span class="loan-title">Your next deduction:<sup>(monthly Installments)</sup></span>
+                                    <span class="amount">&#x20A6;14,000.<sup>00</sup></span>
+                                </section>
+                                <section>
+                                  <span class="loan-title">Loan Balance:</span>
+                                  <span class="amount">&#x20A6;28,000.<sup>00</sup></span>
+                                </section>
+                                <section>
+                                  <span class="loan-title">On Time Repayment Rate:</span>
+                                  <span class="amount">5%</span>
+                                </section>
+
+                                <span class="history-dropdown" data-for-dropdown='active-loan'><i class="fa fa-caret-down"></i></span> 
+                              </div>
+                             
+                             <div class="table-dropdown" data-dropdown ='active-loan'>
+                                  <table>
+                                    <tr>
+                                      <th>Loan ID</th>
+                                      <th>Date of Payment</th>
+                                      <th>Loan Amount</th>
+                                      <th>Amount Paid</th>
+                                      <th>Status</th>
+                                    </tr>
+                                    <tr>
+                                      <td>2315</td>
+                                      <td>23 May, 2019</td>
+                                      <td>&#x20A6 80,000</td>
+                                      <td>&#x20A6 14,000</td>
+                                      <td style="color:rgb(8, 241, 8)">Paid</td>
+                                    </tr>
+                                  </table>
+                              </div>
+                          </div>
+                          <!---end of active loan dropdown btn and content-->
+                          <div class="cleared-loan-payment">
+                              <div class="detailsbox">
+                                <section>
+                                      <span>Cleared Loan</span>
+                                    <span class="loan-title">Your next deduction:</span>
+                                    <span class="amount">&#x20A6;0.<sup>00</sup></span>
+                                </section>
+                                <section>
+                                  <span class="loan-title">Loan Balance:</span>
+                                  <span class="amount">&#x20A6;0.<sup>00</sup></span>
+                                </section>
+                                <section>
+                                  <span class="loan-title">On Time Repayment Rate:</span>
+                                  <span class="amount">5%</span>
+                                </section>
+
+                                <span class="history-dropdown" data-for-dropdown='cleared-loan'><i class="fa fa-caret-down"></i></span> 
+                              </div>
+                             
+                             <div class="table-dropdown" data-dropdown="cleared-loan">
+                                  <table>
+                                    <tr>
+                                      <th>Loan ID</th>
+                                      <th>Date of Payment</th>
+                                      <th>Loan ID</th>
+                                      <th>Loan ID</th>
+                                      <th>Loan ID</th>
+                                    </tr>
+                                  </table>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                  </div>
+                  <!---End of Dynamic Side Bar Navigation for transaction Table Content-->
+                  <div class="tab-content-sidebar profile">
+                    Profile
+                  </div>
+                   <!---End of Dynamic Side Bar Navigation for profile Table Content-->
+                  <div class="tab-content-sidebar settings">
+                    Settings
+                  </div>
+                   <!---End of Dynamic Side Bar Navigation for Settings Content-->
+        </main>
+    </div>
+    <!--End of container-->
+    <script src="../js/userdashboard.js"></script>
+</body>
+</html>
