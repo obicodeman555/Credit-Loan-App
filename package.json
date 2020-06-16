@@ -1,0 +1,27 @@
+{
+  "name": "credit-loan-app",
+  "version": "1.0.0",
+  "description": "Quick Credit is an online lending platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel server -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/obicodeman555/Credit-Loan-App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/obicodeman555/Credit-Loan-App/issues"
+  },
+  "homepage": "https://github.com/obicodeman555/Credit-Loan-App#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-watch": "^7.0.0",
+    "nodemon": "^2.0.4"
+  }
+}

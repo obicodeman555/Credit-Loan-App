@@ -1,0 +1,155 @@
+:root {
+  --app-bg-color: rgba(243, 245, 252, 0.321);
+  --app-link-color: #f2cf1d;
+  --app-primary-btn-color: #f25c05;
+  --app-secondary-bg-color: #fff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--app-bg-color);
+  /* animation: transitionIn 1s; */
+  overflow-x: hidden;
+  overflow-y: scroll;
+  /* text-rendering: optimizeLegibility;
+  text-size-adjust: 100%; */
+  box-sizing: border-box;
+  font-family: "Candara";
+  font-weight: 400;
+  line-height: 1.7;
+  padding: 2rem;
+  color: rgb(255, 255, 255);
+}
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(49, 53, 48, 0.8),
+      rgba(90, 42, 20, 0.8)
+    ),
+    url(../images/indexbg.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.logo-box {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-img {
+  height: 6rem;
+}
+
+.logo-text {
+  font-size: 2.75rem;
+  font-weight: 600;
+}
+nav {
+  width: 100%;
+}
+nav ul {
+  float: right;
+  margin-right: 2rem;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  line-height: 8rem;
+  margin: 0 5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(170, 158, 158);
+  text-transform: uppercase;
+  padding: 0.7rem 1.3rem;
+  border-radius: 0.3rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.08rem;
+}
+
+nav ul li a:hover,
+a.active {
+  background: #7b3f00;
+  transition: 0.5s;
+}
+
+.text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.heading-primary-main {
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+  text-align: center;
+  animation: moveInLeft 5s ease-out;
+}
+
+.heading-primary {
+  backface-visibility: hidden;
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+  /* width:50%; */
+  animation: fadeInfadeOut 3s ease-out;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes fadeInfadeOut {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+    color: #777;
+  }
+  100% {
+    opacity: 1;
+    color: #ffffe0;
+  }
+}

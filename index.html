@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/public/css/index.css" />
+    <link rel="stylesheet" href="./fontawesome/css/all.css" />
+    <link rel="stylesheet" href="./fontawesome/css/solid.css" />
+    <link rel="stylesheet" href="fontawesome/css/regular.css" />
+    <link rel="stylesheet" href="./src/public/css/logregmodal.css">
+    <!-- <link rel="stylesheet" href="fontawesome/webfonts/fa-regular-400.ttf"> -->
+    <title>Quick Credit | Homepage</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo-box">
+          <img src="./src/public/images/wallet.png" alt="fa-google-wallet" class="logo-img"/>
+          <span class="logo-text">Quick-Credit</spa>
+      </div>
+
+      <nav>
+          <ul>
+            <li><a href="#" class="active">About us</a></li>
+            <li><a href="#">services</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#" id="modal-trigger">login | register</a></li>
+          </ul>
+      </nav>
+
+      <div class="text-box">
+        <h1 class="heading-primary">
+          <span class="heading-primary-main">
+            LEND NOW, PAY LATER
+          </span>
+
+          <span class="heading-primary-sub">
+            Finance is complex enough. People and businesses deserve easy,
+            straightforward products that actually work. Quick Credit makes it
+            super easy for anyone to borrow, invest and make payments. No
+            excuses.
+          </span>
+        </h1>
+      </div>
+      <!-- <a
+          class="navbar-burger burger"
+          role="button"
+          aria-label="menu"
+          data-target="navMenu"
+          aria-expanded="false"
+        >
+          <span>&#8801;</span>
+        </a> -->
+    </header>
+
+
+    <div class="modal-container">
+        <div class="modal-container__content">
+
+              <div class="form-content login-content form-active" data-tab="2">
+                  <div class="form-logo">
+                      <img src="./src/public/images/stack.png" alt="">
+                  </div>
+                  <form action="./src/public/user/user-dashboard.html" target="__blank">
+                    <h2 class="form-head">Sign in to <span>Quick-Credit</span></h2>
+                      <input type="email" class="input-field" placeholder="Email..." autocomplete>
+                      <input type="password"   class="input-field" placeholder="Password..." autocomplete>
+                      <a href="" class="fpaswd">Forgot password?</a>
+                      <span class="validator">Please enter a valid email address</span>
+                      <input type="submit" value="Sign in">
+                      <span class="question">Don't have an account?<a href="#" class="tab" data-for-tab="1">Sign up</a></span>
+                  </form>
+              </div>
+
+              <div class="form-content register-content" data-tab="1">
+                <div class="form-logo">
+                    <img src="./src/public/images/stack.png" alt="">
+                </div>
+                <form action="./src/public/user/user-dashboard.html">
+                  <h2 class="form-head">
+                    Create a
+                    <span id="logo-text">Quick-Credit</span>
+                    account
+                  </h2>
+                    <input type="text" class="input-field" placeholder="Username.." autocomplete>
+                    <input type="text" class="input-field" placeholder="First name..." autocomplete>
+                    <input type="email" class="input-field" placeholder="Email..." autocomplete>
+                    <input type="password" class="input-field" placeholder="Password..." autocomplete>
+                    <input type="text" class="input-field" placeholder="Address..." autocomplete>
+                  <span class="binding">
+                      By clicking on register you have agreed to the 
+                      <a href="">Terms of our Services</a>
+                      and <a href="">Condition of registration</a>
+                      and Lorem ipsum dolor sit amet.
+                  </span>
+                    <input type="submit" value="Register">
+                    <span class="question">
+                      Already have an account?
+                      <a href="#" class="tab" data-for-tab="2" >
+                        Sign in
+                      </a>
+                    </span>
+                </form>
+              </div>
+        </div>
+
+        <div class="close-button">
+          <img src='./src/public/images/delete.png'>
+        </div>
+    </div>
+
+
+
+    <script src="./src/public/js/lreg-modal.js"></script>
+  </body>
+</html>
